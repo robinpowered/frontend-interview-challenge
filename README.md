@@ -24,6 +24,7 @@ This contains the mock data that will be used for the particular challenge. Thes
 
 Each challenge has a test file to verify the output for a series of inputs. Tests can be ran as they would in any standard node package.
 
+
 ### Meeting Availability Challenge
 
 Find the availabile time slots within a given schedule.
@@ -61,6 +62,14 @@ Create a React or Angular component representing a common UI element seen across
 
 
 [View the challenge](https://github.com/robinpowered/frontend-interview-challenge/tree/master/challenges/3.%20React%20Components)
+
+### Web Service
+
+Create a web service that will provide the available and unavailable schedules.
+
+### Full Stack
+
+Tie all the pieces together with a mini application that will use the web service to power the React/Angular component.
 
 ## Preparing and submitting the challenge
 
