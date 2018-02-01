@@ -2,6 +2,19 @@
 
 The goal is to find available times for users with different schedules. For a given set of user schedules, the function should determine which time spans are free for all users.
 
+```js
+/**
+ * Given a collection of schedules, find all the free times within an overall time range.
+ *
+ * @param {Array<Array<event>>} schedules A collection of user schedules to compare.
+ * @param {moment} start The starting time to seek for free periods.
+ * @param {moment} end The time to stop seeking for free periods.
+ * @param {number} minimumFreeDuration The minimum amount of time a period needs to be
+ * @return {Array<timeRange>} A collection of free periods across all user schedules.
+ */
+function findCommonFreeTimes (schedules, start, end, minimumFreeDuration) { }
+```
+
 The schedule is an array of events, which contain a `start` and `end` field.
 
 ```js
