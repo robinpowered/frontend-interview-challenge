@@ -17,7 +17,7 @@ export function Pill ({className, children, ...props}) {
   className = Array.isArray(className) ? className : [className];
   const classes = ['pill', ...className];
   return (
-    <div className={classes}>
+    <div className={classes.join(' ')}>
       {children}
     </div>
   );
