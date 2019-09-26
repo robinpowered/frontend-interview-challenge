@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prettify": "prettier --write --tab-width 2 \"src/**/*.js\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettify",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,7 +32,10 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "enzyme": "^2.7.1",
+    "husky": "^3.0.5",
     "jest": "^19.0.2",
+    "lint-staged": "^9.4.0",
+    "prettier": "^1.18.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-test-renderer": "^15.4.2",
