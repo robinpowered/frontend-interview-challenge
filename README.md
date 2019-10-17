@@ -35,10 +35,6 @@ This is where you will implement the function, or component, to complete the cha
 
 This contains the mock data that will be used for the particular challenge. These are made up events, or multiple groups of events, depending on the challenge.
 
-#### `test.js`
-
-Each challenge has a test file to verify the output for a series of inputs. Tests can be ran as they would in any standard node package.
-
 ### Meeting Availability Challenge
 
 Find the availabile time slots within a given schedule.
@@ -61,7 +57,7 @@ findFreeTimesAcrossSchedules(start: Date, end: Date, duration: number, schedules
 
 ### Component Challenge
 
-Create a React or Angular component representing a common UI element seen across Robin.
+Create a React component representing a common UI element seen across Robin.
 
 ```jsx
 <AvailabilityTimePills
