@@ -1,48 +1,43 @@
 {
   "name": "frontend-interview-challenge",
-  "version": "1.0.0",
-  "description": "## Challenges",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "npm run test -- --watch",
-    "prettify": "prettier --write --tab-width 2 \"src/**/*.js\"",
-    "precommit": "lint-staged"
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.18",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "typescript": "^4.5.4",
+    "web-vitals": "^2.1.2"
   },
-  "lint-staged": {
-    "*.js": [
-      "npm run prettify",
-      "git add"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/robinpowered/frontend-interview-challenge.git"
-  },
-  "author": "Atticus White <atticus@robinpowered.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/robinpowered/frontend-interview-challenge/issues"
-  },
-  "homepage": "https://github.com/robinpowered/frontend-interview-challenge#readme",
-  "devDependencies": {
-    "babel-jest": "^19.0.0",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "enzyme": "^2.7.1",
-    "husky": "^3.0.5",
-    "jest": "^19.0.2",
-    "lint-staged": "^9.4.0",
-    "prettier": "^1.18.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.4.2",
-    "regenerator-runtime": "^0.10.3"
-  },
-  "dependencies": {
-    "moment": "^2.20.1",
-    "react": "^15.4.2"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
