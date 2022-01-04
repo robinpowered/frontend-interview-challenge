@@ -1,5 +1,3 @@
-export function App() {
-  return (
-    <div>hello world</div>
-  );
+export const App = () => {
+  return null;
 }
