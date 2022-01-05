@@ -1,6 +1,7 @@
 [
   {
     "user_id": 1,
+    "user_name": "Alice",
     "working_hours": {
       "start": "09:00",
       "end": "17:00",
@@ -35,6 +36,7 @@
   },
   {
     "user_id": 2,
+    "user_name": "Aldo",
     "time_zone": "America/New_York",
     "working_hours": {
       "start": "08:00",
@@ -70,6 +72,7 @@
   },
   {
     "user_id": 3,
+    "user_name": "Joe",
     "working_hours": {
       "start": "10:00",
       "end": "18:00",

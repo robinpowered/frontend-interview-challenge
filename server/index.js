@@ -7,9 +7,8 @@ const requestListener = (req, res) => {
   res.end(JSON.stringify(data));
 };
 
-const port = 8080;
 const server = http.createServer(requestListener);
-server.listen(port);
-console.log(`Server listening on port ${port}; starting create-react-app...`);
-
-spawn('react-scripts', ['start'], {stdio: 'inherit'})
+server.listen(8080, () => {
+  console.log('Server started; starting create-react-app...');
+  spawn('react-scripts', ['start'], {stdio: 'inherit'})
+});
