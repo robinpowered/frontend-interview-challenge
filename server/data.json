@@ -9,26 +9,32 @@
     },
     "events": [
       {
+        "id": 1,
+        "title": "Meeting A",
+        "start": "2019-01-01T08:00:00-0500",
+        "end": "2019-01-01T9:00:00-0500"
+      },
+      {
         "id": 2,
-        "title": "Meeting B",
+        "title": "Meeting C",
         "start": "2019-01-01T09:00:00-0500",
         "end": "2019-01-01T10:00:00-0500"
       },
       {
-        "id": 4,
-        "title": "Meeting D",
+        "id": 3,
+        "title": "Meeting C",
         "start": "2019-01-01T11:00:00-0500",
         "end": "2019-01-01T12:00:00-0500"
       },
       {
-        "id": 6,
-        "title": "Meeting F",
+        "id": 4,
+        "title": "Meeting D",
         "start": "2019-01-01T12:00:00-0500",
         "end": "2019-01-01T12:45:00-0500"
       },
       {
-        "id": 8,
-        "title": "Meeting H",
+        "id": 5,
+        "title": "Meeting E",
         "start": "2019-01-01T14:00:00-0500",
         "end": "2019-01-01T15:30:00-0500"
       }
