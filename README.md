@@ -43,8 +43,8 @@ See the `User data` section below for more information about the shape of the JS
 
 Now that you've fetched the data, please:
 
-1. Render a table of events that start and end within each user's working hours
-2. Create a filter that lets you filter events only by a specific user
+1. Render a table of events across all the users, but **only events that start and end within each user's working hours**
+2. Create a filter with options for each user in the dataset. When a user is selected, only show events in the table for the selected user
 
 ### Guidelines
 
