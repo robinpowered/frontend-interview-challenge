@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const http = require('http');
 const spawn = require('child_process').spawn;
 const data = require('./data.json');
@@ -10,5 +12,5 @@ const requestListener = (req, res) => {
 const server = http.createServer(requestListener);
 server.listen(8080, () => {
   console.log('Server started; starting create-react-app...');
-  spawn('react-scripts', ['start'], {stdio: 'inherit'})
+  spawn('npx', ['react-scripts', 'start'], {stdio: 'inherit'})
 });
