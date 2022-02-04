@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "node ./server",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "create-patch": "git format-patch master --stdout > solution.patch && echo 'solution.patch file created! Please email this file back to Robin.'"
   },
   "eslintConfig": {
     "extends": [
