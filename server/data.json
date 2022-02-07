@@ -42,7 +42,7 @@
   },
   {
     "user_id": 2,
-    "user_name": "Aldo",
+    "user_name": "Amir",
     "time_zone": "America/New_York",
     "working_hours": {
       "start": "08:00",
@@ -78,7 +78,7 @@
   },
   {
     "user_id": 3,
-    "user_name": "Joe",
+    "user_name": "Jordan",
     "working_hours": {
       "start": "10:00",
       "end": "18:00",
