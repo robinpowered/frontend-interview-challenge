@@ -42,7 +42,7 @@
     "regenerator-runtime": "^0.10.3"
   },
   "dependencies": {
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "react": "^15.4.2"
   }
 }
