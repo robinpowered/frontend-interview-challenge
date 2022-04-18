@@ -1,84 +1,101 @@
-# Robin Frontend Interview Challenge
+# Robin Front-end Interview Challenge
 
-Welcome!
-
-Here you will find a set of problems to solve when interviewing with Robin. These problems represent real-world scenarios you can expect to encounter while working at Robin.
-
-We do not expect you to spend more than an hour or two on these challenges.
+Hi there! Congrats on making it to the take-home portion of our interview process! We aim for this exercise to be enjoyable and brief, and welcome feedback. We also are happy to answer questions, so please don't be shy about reaching out to your point of contact at Robin should you find any parts of this challenge unclear or confusing.
 
 ## Getting Started
 
-### Pre-requisites
+To get up and running:
 
-- NodeJS version 8+ [Download here](https://nodejs.org/en/)
+1. Install NodeJS 16+. If you have `nvm` installed, run `nvm use` from the root of the repository.
+2. Install dependencies:
 
-Once node is installed clone this repository. Please ensure all work is done on a new feature branch:
+   ```bash
+   npm install
+   ```
+
+3. Boot up the test web server & front-end application:
+
+   ```bash
+   npm start
+   ```
+
+## Challenge
+
+You will be building a simple web app that fetches data from a remote server, transforms it, and outputs some UI. In the end, your solution should match this wireframe:
+
+![Wireframe](wireframe.png)
+
+Specifically, we ask that you:
+
+### 1. Fetch remote data
+
+Please make an HTTP request to fetch JSON from the bundled web server. This server is started automatically upon running `npm start` and is available at `http://localhost:8080/data`.
+
+We've also [proxied](https://create-react-app.dev/docs/proxying-api-requests-in-development/) the server for your convenience, so you may fetch data in your client-side code by simply making a `GET` request to `/data`.
+
+See the `User data` section below for more information about the shape of the JSON.
+
+### 2. Display the data in a table
+
+Please render a table of events for all users, but **only include events that start and end within each user's working hours**.
+
+### 3. Add a user filter
+
+Please create a filter with options for each user in the dataset. When a user is selected, only show events in the table for the selected user.
+
+## Guidelines
+
+When writing your solution, please:
+
+- Timebox your effort to no more than 2 hours. Even if your solution is incomplete, we'd prefer that you feel proud of the code you did write rather than accept an incomplete or buggy solution.
+- Use whatever tools or packages you'd like to help you write your solution. If you enjoy performing network requests with `axios` or styling tables with `styled-components`, feel free to install these libraries!
+- TypeScript is enabled in this project and is available for use but it is **not required**! Write your solution in whichever language you're most comfortable with. If you prefer plain JavaScript, the easiest path forward is to create `.js` or `.jsx` modules instead of `.ts` or `.tsx` (and rename the existing `App.ts` to `App.js`, too).
+
+## User data
+
+The test data served by the bundled web server is array of objects where each object represents an individual user, with properties for:
+
+- A list of meetings the user has on their schedule (`events` property)
+- The hours in which the user works (`working_hours` property), and their time zone
+- The user's ID and name (`user_id` and `user_name` properties)
+
+```json
+[
+  {
+    "user_id": 1,
+    "user_name": "Alice",
+    "working_hours": {
+      "start": "09:00",
+      "end": "17:00",
+      "time_zone": "America/New_York"
+    },
+    "events": [
+      {
+        "id": 2,
+        "title": "Meeting B",
+        "start": "2019-01-01T09:00:00-0500",
+        "end": "2019-01-01T10:00:00-0500"
+      },
+      ...
+    ]
+  },
+  ...
+]
 ```
-git checkout -b robin-challenge-solutions
-```
 
-```
-npm install
-```
+## Extras
 
-## Challenges
+Optionally and only if you find yourself with extra time on your hands (we really mean it - these are not requirements), we'd love to see you show off your skills by adding any of the following:
 
-The challenges are broken into two groups - functional programming challenges and UI component challenges.
+- loading and error states
+- accessible table considerations
+- offline detection for users of the application
+- the scaffolding to share selected user state across the application (pretend we were going to add more views to this application, and each view needed access to the filtered user - how could we achieve that? )
 
-Challenges can be found in the `challenges/` directory. Each challenge contains three files:
+## Submitting the Challenge
 
-#### `challenge.js`
+If you have any notes you'd like us to review when we look over this project, please feel free to add them to the `notes.md` file at the root.
 
-This is where you will implement the function, or component, to complete the challenge. The contents of this file are entirely up to you, the only requirement is that the function signature remains the same and remains exported.
+After completing this challenge, please email us your zipped solution!
 
-#### `data.json`
-
-This contains the mock data that will be used for the particular challenge. These are made up events, or multiple groups of events, depending on the challenge.
-
-### Meeting Availability Challenge
-
-Find the availabile time slots within a given schedule.
-
-```js
-findFreeTimes(start: Date, end: Date, duration: number, events: Array<Event>)
-```
-
-[View the challenge](https://github.com/robinpowered/frontend-interview-challenge/tree/master/challenges/1.%20Meeting%20Availability)
-
-### User Availability Challenge
-
-Find the available time slots that are free across a set of individual schedules.
-
-```js
-findFreeTimesAcrossSchedules(start: Date, end: Date, duration: number, schedules: Array<Array<Event>>)
-```
-
-[View the challenge](https://github.com/robinpowered/frontend-interview-challenge/tree/master/challenges/2.%20User%20Availability)
-
-### Component Challenge
-
-Create a React component representing a common UI element seen across Robin.
-
-```jsx
-<AvailabilityTimePills
-  start={startTime}
-  end={endTime}
-  duration={30}
-  events={events}
-/>
-```
-
-<img width="1000" alt="screen shot 2017-03-21 at 4 34 59 pm" src="https://cloud.githubusercontent.com/assets/656630/24169546/5e2610b6-0e54-11e7-87cd-0b70744dc269.png">
-
-
-[View the challenge](https://github.com/robinpowered/frontend-interview-challenge/tree/master/challenges/3.%20React%20Components)
-
-## Preparing and submitting the challenge
-
-Please submit your response in the form of a git patch. This can be generated by running the following command. Please check to make sure all your changes are committed before generating the patch file.
-
-```
-git format-patch master --stdout > <yourname>-solutions.patch
-```
-
-We look forward to seeing your solutions!
+We look forward to seeing your work and will get back to you promptly.
